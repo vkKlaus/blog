@@ -1,5 +1,24 @@
 /* Design by http://www.dreamtemplate.com */
 @charset "utf-8";
+
+
+@font-face{
+
+	font-family: 'Liberation';
+	
+	src: url('../webfonts/LiberationSans-Bold.ttf') format('truetype');
+	
+	src: url('../webfonts/LiberationSans-BoldItalic.ttf') format('truetype');
+	
+	src:url('../webfonts/LiberationSans-Italic.ttf') format('truetype');
+	
+	src:url('../webfonts/LiberationSans-Regular.ttf') format('truetype');
+	
+	font-weight: normal;
+	
+	font-style: italic;
+	
+	}
 body {
 	margin:0;
 	padding:0;
