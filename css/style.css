@@ -20,20 +20,23 @@
 	
 	}
 body {
-	margin:0;
-	padding:0;
+
 	width:100%;
 	color:#8a8a8a;
 	font:normal 12px/1.5em "Liberation sans", Arial, Helvetica, sans-serif;
 	background:#0f0f0f url(../images/main_bg.gif) repeat left top;
 }
-html, .main {
-	padding:0;
-	margin:0;
+
+
+.navbar-brand img{
+	width: 5rem;
 }
-.main {
-	background:url(../images/header_bg.jpg) no-repeat center top;
+
+a {
+	color:#fdbb20;
+	text-decoration:underline;
 }
+/* }
 .clr {
 	clear:both;
 	padding:0;
@@ -53,16 +56,13 @@ p {
 	margin:8px 0;
 	padding:0 0 8px 0;
 }
-a {
-	color:#fdbb20;
-	text-decoration:underline;
-}
-.header, .content, .menu_nav, .fbg, .footer, form, ol, ol li, ul, .content .mainbar, .content .sidebar {
+
+header, .content, .menu_nav, .fbg, .footer, form, ol, ol li, ul, .content .mainbar, .content .sidebar {
 	margin:0;
 	padding:0;
 }
-.header {
-}
+
+
 .header_resize {
 	margin:0 auto;
 	padding:0;
@@ -511,4 +511,4 @@ ol li .send {
 }
 a {
 	outline:none;
-}
+} */
