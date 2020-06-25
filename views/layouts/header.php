@@ -1,7 +1,7 @@
 <?php
 
 ?>
-    
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,13 +14,21 @@
 
     <link rel="stylesheet" href="/css/all.min.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/coin-slider.css" />
     <link rel="stylesheet" href="/css/style.css">
 
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/js/jquery.mousewheel.js"></script>
+    <script src="js/coin-slider.min.js"></script>
+    <script src="/js/script.js"></script>
 </head>
 
-<body class="container">
-
-    <header class="container">
+<body class="container px-0">
+    <header class="container px-0">
         <div class="container">
             <div class="d-flex flex-column">
                 <div class="d-flex justify-content-between align-items-center">
@@ -43,30 +51,42 @@
             </div>
         </div>
 
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg navbar-light px-0">
+            <button class="navbar-toggler  bg-dark border border-dark rounded text-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
+
+            <div class="collapse navbar-collapse  bg-dark border border-dark rounded" id="navbarNav">
+                <ul class="navbar-nav px-2">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#"><span class="active">Главная</span></a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link " href="#"><span>Фридайвинг</span></a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="#"><span>Корги</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span>Кемпинг</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span>Обо мне</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span>Контакты</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span>Админка</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
-
-
     </header>
-
     <main>

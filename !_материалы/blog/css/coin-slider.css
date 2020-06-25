@@ -35,7 +35,7 @@
 	background-image:url(../images/slide_a.png);
 }
 /* text in slider */
-.cs-title {
+/* .cs-title {
 	display:block;
 	padding:16px 60px 16px 24px;
 	width:100%;
@@ -43,7 +43,7 @@
 	font-size:15px;
 	line-height:1.5em;
 	background:url(../images/overlay.png) repeat left top;
-}
+} */
 .cs-title big {
 	font-size:20px;
 	line-height:32px;

@@ -32,11 +32,21 @@ body {
 	width: 5rem;
 }
 
+li{
+	padding: 0 1rem;
+}
+
 a {
-	color:#fdbb20;
+	color:#fdbb20 !important;
+	text-decoration:none;
+	font-size: 1rem;
+}
+
+.active{
+	color:#fdfdfd ;	
 	text-decoration:underline;
 }
-/* }
+
 .clr {
 	clear:both;
 	padding:0;
@@ -45,6 +55,8 @@ a {
 	font-size:0;
 	line-height:0;
 }
+
+/*
 h2 {
 	margin:8px 0;
 	padding:8px 0;
