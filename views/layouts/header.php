@@ -63,18 +63,6 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="#"><span>Фридайвинг</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span>Корги</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span>Кемпинг</span></a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link" href="#"><span>Обо мне</span></a>
                     </li>
 
@@ -83,7 +71,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span>Админка</span></a>
+                        <a class="nav-link" href="/views/admin/index.php"><span>Админка</span></a>
                     </li>
                 </ul>
             </div>
