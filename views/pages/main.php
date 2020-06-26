@@ -59,8 +59,8 @@
             </div>
         </div>
         <div id="section-select" class="col-3">
-            <div id="calenlar" class="border border-top-0 border-left-0 border-right-0 border-dark py-3">
-dfsdfsdfsd
+            <div id="calendar" class="border border-top-0 border-left-0 border-right-0 border-dark py-3">
+
             </div>
            
 

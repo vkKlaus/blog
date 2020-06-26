@@ -14,16 +14,25 @@
 
     <link rel="stylesheet" href="/css/all.min.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/coin-slider.css" />
+    <link rel="stylesheet" href="/css/coin-slider.css" />
+
+
     <link rel="stylesheet" href="/css/style.css">
 
-    <script src="js/jquery-3.5.1.min.js"></script>
+
+
+    <script src="/js/jquery-3.5.1.min.js"></script>
 
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" />
+
     <script src="/js/jquery.mousewheel.js"></script>
-    <script src="js/coin-slider.min.js"></script>
+    <script src="/js/coin-slider.min.js"></script>
+
+
     <script src="/js/script.js"></script>
 </head>
 
@@ -33,7 +42,7 @@
             <div class="d-flex flex-column">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <a class="navbar-brand my-2" href="#"><img src="images/logo.png" alt=""></a>
+                        <a class="navbar-brand my-2" href="#"><img src="/images/logo.png" alt=""></a>
                     </div>
 
                     <div>
@@ -59,7 +68,7 @@
             <div class="collapse navbar-collapse  bg-dark border border-dark rounded" id="navbarNav">
                 <ul class="navbar-nav px-2">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="active">Главная</span></a>
+                        <a class="nav-link" href="/"><span class="active">Главная</span></a>
                     </li>
 
                     <li class="nav-item">
