@@ -12,6 +12,7 @@ $(document).ready(function () {
     }
   }).responseText);
 
+  console
   title.forEach(element => {
     let link= $('<a>', {
       href: '#',
@@ -34,7 +35,7 @@ $(document).ready(function () {
 
 
   // Slider
-  $('#coin-slider').coinslider({ width: 960, height: 320, opacity: 1 });
+  $('#coin-slider').coinslider({ width: 960, height: 320, opacity: 0.7,delay: 3500, sDelay: 20,effect: 'random', });
 
   
 });
