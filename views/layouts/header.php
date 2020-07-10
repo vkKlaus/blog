@@ -10,13 +10,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KlausBlog</title>
 
-    <link rel="stylesheet" href="/css/reset.css">
+    <!-- <link rel="stylesheet" href="/css/reset.css"> -->
 
     <link rel="stylesheet" href="/css/all.min.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/coin-slider.css" />
+    <!--  -->
+    <link rel="stylesheet" href="/css/katex.min.css" />
 
+    <link rel="stylesheet" href="/css/monokai-sublime.min.css" />
 
+    <link rel="stylesheet" href="/css/quill.snow.css" />
+    <!--  -->
     <link rel="stylesheet" href="/css/style.css">
 
 
@@ -29,8 +34,13 @@
 
     <script src="/js/jquery.mousewheel.js"></script>
     <script src="/js/coin-slider.min.js"></script>
+<!--  -->
+    <script src="/js/katex.min.js"></script>
 
+    <script src="/js/highlight.min.js"></script>
 
+    <script src="/js/quill.min.js"></script>
+<!--  -->
     <script src="/js/script.js"></script>
 </head>
 

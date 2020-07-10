@@ -44,8 +44,7 @@
                            Админка
                         </a>
                         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="views/admin/editor/index.php"><span>Новая статья</span></a>
-                            <a class="dropdown-item" href="#"><span>Комментарии</span></a>
+                            <a class="dropdown-item" href="views/admin/editor/index.php"><span>Редактор</span></a>
                             <a class="dropdown-item" href="#"><span>Юзер'c</span></a>
                         </div>
                     </li>

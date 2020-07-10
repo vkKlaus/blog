@@ -1,151 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/module/connect.php';
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="opensource rich wysiwyg text editor jquery bootstrap execCommand html5" />
-  <link rel="stylesheet" href="/css/reset.css">
-
-  <link rel="stylesheet" href="/css/all.min.css">
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <script src="/js/jquery-3.5.1.min.js"></script>
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="external/jquery.hotkeys.js"></script>
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
-
-  <link  href="/css/style.css" rel="stylesheet">
-  <link href="index.css" rel="stylesheet"> 
-  <script src="bootstrap-wysiwyg.js"></script>
-</head>
-
-<body class="container px-0">
-  <?php require $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/mainMenu.php'; ?>
-
-  <div class="container">
+require $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/index.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/header.php';
+?>
 
 
-    <div id="alerts"></div>
-    <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
-      <div class="btn-group">
-        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a>
-        <ul class="dropdown-menu">
-        </ul>
-      </div>
-      <div class="btn-group">
-        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a data-edit="fontSize 5">
-              <font size="5">Huge</font>
-            </a></li>
-          <li><a data-edit="fontSize 3">
-              <font size="3">Normal</font>
-            </a></li>
-          <li><a data-edit="fontSize 1">
-              <font size="1">Small</font>
-            </a></li>
-        </ul>
-      </div>
-      <div class="btn-group">
-        <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
-        <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
-        <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a>
-        <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a>
-      </div>
-      <div class="btn-group">
-        <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
-        <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
-        <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a>
-        <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="icon-indent-right"></i></a>
-      </div>
-      <div class="btn-group">
-        <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
-        <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
-        <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
-        <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
-      </div>
-      <div class="btn-group">
-        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="icon-link"></i></a>
-        <div class="dropdown-menu input-append">
-          <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
-          <button class="btn" type="button">Add</button>
-        </div>
-        <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="icon-cut"></i></a>
+  <link type="application/atom+xml" rel="alternate" href="feed.xml" />
 
-      </div>
 
-      <div class="btn-group">
-        <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="icon-picture"></i></a>
-        <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
-      </div>
-      <div class="btn-group">
-        <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a>
-        <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a>
-      </div>
-      <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
+  <link rel="stylesheet" href="katex.min.css" />
+  <link rel="stylesheet" href="monokai-sublime.min.css" />
+  <link rel="stylesheet" href="quill.snow.css" />
+
+
+
+  <div id="standalone-container">
+    <div id="toolbar-container">
+      <span class="ql-formats  text-white">
+        <select class="ql-font"></select>
+        <select class="ql-size"></select>
+      </span>
+      <span class="ql-formats">
+        <button class="ql-bold"></button>
+        <button class="ql-italic"></button>
+        <button class="ql-underline"></button>
+        <button class="ql-strike"></button>
+      </span>
+      <span class="ql-formats">
+        <select class="ql-color"></select>
+        <select class="ql-background"></select>
+      </span>
+      <span class="ql-formats">
+        <button class="ql-script" value="sub"></button>
+        <button class="ql-script" value="super"></button>
+      </span>
+      <span class="ql-formats">
+        <button class="ql-header" value="1"></button>
+        <button class="ql-header" value="2"></button>
+        <button class="ql-blockquote"></button>
+        <button class="ql-code-block"></button>
+      </span>
+      <span class="ql-formats">
+        <button class="ql-list" value="ordered"></button>
+        <button class="ql-list" value="bullet"></button>
+        <button class="ql-indent" value="-1"></button>
+        <button class="ql-indent" value="+1"></button>
+      </span>
+      <span class="ql-formats">
+        <button class="ql-direction" value="rtl"></button>
+        <select class="ql-align"></select>
+      </span>
+      <span class="ql-formats">
+        <button class="ql-link" type="button"><svg viewBox="0 0 18 18">
+            <line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line>
+            <path class="ql-even ql-stroke" d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z"></path>
+            <path class="ql-even ql-stroke" d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z"></path>
+          </svg></button>
+        <button class="ql-image" type="button"><svg viewBox="0 0 18 18">
+            <rect class="ql-stroke" height="10" width="12" x="3" y="4"></rect>
+            <circle class="ql-fill" cx="6" cy="7" r="1"></circle>
+            <polyline class="ql-even ql-fill" points="5 12 5 11 7 9 8 10 11 7 13 9 13 12 5 12"></polyline>
+          </svg></button>
+      </span>
+
     </div>
-    <div id="editor">
-    </div>
+    <div id="editor-container"></div>
   </div>
+
+
+
+  <script src="katex.min.js"></script>
+
+  <script src="highlight.min.js"></script>
+
+  <script src="quill.min.js"></script>
+
   <script>
-    $(function() {
-      function initToolbarBootstrapBindings() {
-        var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
-            'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
-            'Times New Roman', 'Verdana'
-          ],
-          fontTarget = $('[title=Font]').siblings('.dropdown-menu');
-        $.each(fonts, function(idx, fontName) {
-          fontTarget.append($('<li><a data-edit="fontName ' + fontName + '" style="font-family:\'' + fontName + '\'">' + fontName + '</a></li>'));
-        });
-        $('a[title]').tooltip({
-          container: 'body'
-        });
-        $('.dropdown-menu input').click(function() {
-            return false;
-          })
-          .change(function() {
-            $(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');
-          })
-          .keydown('esc', function() {
-            this.value = '';
-            $(this).change();
-          });
+    var quill = new Quill('#editor-container', {
+      modules: {
+        formula: true,
+        syntax: true,
+        toolbar: '#toolbar-container'
 
-        $('[data-role=magic-overlay]').each(function() {
-          var overlay = $(this),
-            target = $(overlay.data('target'));
-          overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
-        });
-        if ("onwebkitspeechchange" in document.createElement("input")) {
-          var editorOffset = $('#editor').offset();
-          $('#voiceBtn').css('position', 'absolute').offset({
-            top: editorOffset.top,
-            left: editorOffset.left + $('#editor').innerWidth() - 35
-          });
-        } else {
-          $('#voiceBtn').hide();
-        }
-      };
-
-      function showErrorAlert(reason, detail) {
-        var msg = '';
-        if (reason === 'unsupported-file-type') {
-          msg = "Unsupported format " + detail;
-        } else {
-          console.log("error uploading file", reason, detail);
-        }
-        $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
-          '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
-      };
-      initToolbarBootstrapBindings();
-      $('#editor').wysiwyg({
-        fileUploadError: showErrorAlert
-      });
-      window.prettyPrint && prettyPrint();
+      },
+      placeholder: 'Compose an epic...',
+      theme: 'snow'
     });
   </script>
-</body>
 
-</html>
+
