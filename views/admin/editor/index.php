@@ -17,7 +17,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/header.php';
 
   <div id="standalone-container">
     <div id="toolbar-container">
-      <span class="ql-formats  text-white">
+      <span class="ql-formats">
         <select class="ql-font"></select>
         <select class="ql-size"></select>
       </span>
